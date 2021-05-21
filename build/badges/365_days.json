@@ -1,0 +1,1 @@
+{"name":"365 Day Staker","description":"You staked your SNX for at least 365 days.","external_url":"http://localhost:8080/365_days","image":"http://localhost:8080/fighters/fighter-0-90-0.png","attributes":[{"trait_type":"Days Staked","value":365,"max_value":365}]}
