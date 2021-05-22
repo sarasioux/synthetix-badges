@@ -11,10 +11,10 @@
         </div>
         <div class="card-content">
             <div class="media">
-                <p class="title is-4">{{badge.name}}</p>
+                <p class="title is-5">{{badge.name}}</p>
             </div>
 
-            <div class="content">
+            <div class="content is-small">
                 {{badge.description}}
             </div>
         </div>
@@ -46,5 +46,10 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+.is-small {
+    font-size: 0.9em;
+}
+    .card-content {
+        padding: 0.8em;
+    }
 </style>

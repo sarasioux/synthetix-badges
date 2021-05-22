@@ -3,8 +3,7 @@ pragma solidity >=0.8.0 <0.9.0;
 
 contract BadgeLookup {
 
-    string constant apiUrl = "https://synthetixbadges.glitch.me/";               // api.synthetix.io
-    string constant tokenUrl = "https://synthetixbadges.netlify.com/";               // api.synthetix.io
+    string constant public apiUrl = "https://synthetixbadges.glitch.me/badge/";               // api.synthetix.io
 
     // Badge Lookups
     uint256 public totalBadges;
@@ -15,22 +14,29 @@ contract BadgeLookup {
      /**
      * Simple lookup contract that can be replaced with new information.
      */
-    constructor() payable {
+    constructor() {
 
-        badgeUrl[1] = "https://synthetixbadges.netlify.com/badges/90_days.json";
-        badgeUrl[2] = "https://synthetixbadges.netlify.com/badges/180_days.json";
-        badgeUrl[3] = "https://synthetixbadges.netlify.com/badges/365_days.json";
-        badgeUrl[4] = "https://synthetixbadges.netlify.com/badges/top_100.json";
-        badgeUrl[5] = "https://synthetixbadges.netlify.com/badges/top_1000.json";
-
-        totalBadges = 5;
+        // Replace these with IPFS URLs
+        uint256 id;
+        id++;
+        badgeUrl[id] = "https://synthetixbadges.netlify.com/badges/90_days.json";
+        id++;
+        badgeUrl[id] = "https://synthetixbadges.netlify.com/badges/180_days.json";
+        id++;
+        badgeUrl[id] = "https://synthetixbadges.netlify.com/badges/365_days.json";
+        id++;
+        badgeUrl[id] = "https://synthetixbadges.netlify.com/badges/top_100.json";
+        id++;
+        badgeUrl[id] = "https://synthetixbadges.netlify.com/badges/top_1000.json";
+        totalBadges = id;
     }
 
     /**
      * Token lookup for myself or someone else.
      */
-    function getBadgeById(uint256 id) view public returns(string memory) {
-        return badgeUrl[id];
+    function getBadgeById(uint256 id) view public returns(string memory url) {
+        url = badgeUrl[id];
+        return url;
     }
 
     /**

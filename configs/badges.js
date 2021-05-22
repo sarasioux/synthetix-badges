@@ -42,8 +42,8 @@ module.exports = {
             ],
         },
         "top_100": {
-            "name": "Top 100 Holders",
-            "description": "You have one of the top 100 biggest bags in SNX.",
+            "name": "Top 100 Holder",
+            "description": "You have one of the top 100 bags in SNX.",
             "external_url": badgeUrl + "top_100",
             "image": badgeUrl + "fighters/fighter-90-50-0.png",
             "attributes": [
@@ -55,8 +55,8 @@ module.exports = {
             ],
         },
         "top_1000": {
-            "name": "Top 1000 Holders",
-            "description": "You have one of the top 1000 biggest bags in SNX.",
+            "name": "Top 1000 Holder",
+            "description": "You have one of the top 1000 bags in SNX.",
             "external_url": badgeUrl + "top_1000",
             "image": badgeUrl + "fighters/fighter-0-0-90.png",
             "attributes": [

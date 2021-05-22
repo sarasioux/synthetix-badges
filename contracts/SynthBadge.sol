@@ -13,8 +13,6 @@ contract SynthBadge is ERC721URIStorage, ChainlinkClient {
 
     Counters.Counter private _tokenIds;
 
-    string constant apiUrl = "https://synthetixbadges.glitch.me/badge/";               // api.synthetix.io
-
     // Badge Lookup and owner
     address public badgeLookup;
     address public owner;
@@ -25,7 +23,7 @@ contract SynthBadge is ERC721URIStorage, ChainlinkClient {
     uint256 private fee;
 
     // Internals
-    mapping (bytes32=> address) public requestByAddress;
+    mapping (bytes32=> address) private requestByAddress;
     mapping (address=> uint256[]) public badgesByUser;
     mapping (address=> uint256) public totalUserBadges;
 
@@ -57,7 +55,7 @@ contract SynthBadge is ERC721URIStorage, ChainlinkClient {
         // KOVAN settings
         setPublicChainlinkToken();
         oracle = 0x2f90A6D021db21e1B2A077c5a37B3C7E75D15b7e;
-        jobId = "29fa9aa13bf1468788b7cc4a500a45b8";
+        jobId = bytes32("29fa9aa13bf1468788b7cc4a500a45b8");
         fee = 0.1 * 10 ** 18; // (Varies by network and job)
 
         badgeLookup = _badgeLookup;
@@ -68,12 +66,6 @@ contract SynthBadge is ERC721URIStorage, ChainlinkClient {
      * OWNER ONLY UPDATE FUNCTIONS IN CASE THINGS CHANGE.
      */
 
-    /**
-     * @dev Updates the oracle contract.
-     */
-    function updateOracle(address _oracle) only_owner public {
-        oracle = _oracle;
-    }
 
     /**
      * @dev Updates the oracle contract.
@@ -85,8 +77,15 @@ contract SynthBadge is ERC721URIStorage, ChainlinkClient {
     /**
      * @dev Updates the oracle contract.
      */
+    function updateOracle(address _oracle) only_owner public {
+        oracle = _oracle;
+    }
+
+    /**
+     * @dev Updates the oracle contract.
+     */
     function updateJob(bytes32 _job) only_owner public {
-        jobId = _job;
+        jobId = bytes32(_job);
     }
 
     /**
@@ -96,10 +95,8 @@ contract SynthBadge is ERC721URIStorage, ChainlinkClient {
         fee = _fee;
     }
 
-
     /**
-     * Create a Chainlink request to retrieve API response, find the target
-     * data, then multiply by 1000000000000000000 (to remove decimal places from data).
+     * Create a Chainlink request to retrieve API response, find the target.
      */
     function requestBadges() public returns (bytes32 requestId) {
         requestBadges(msg.sender);
@@ -109,39 +106,34 @@ contract SynthBadge is ERC721URIStorage, ChainlinkClient {
         Chainlink.Request memory request = buildChainlinkRequest(jobId, address(this), this.fulfill.selector);
 
         // Set the URL to perform the GET request on
+        string memory apiUrl = BadgeLookup(badgeLookup).apiUrl();
         string memory url = string(abi.encodePacked(apiUrl, toString(_owner)));
         emit UrlRequested(url);
         request.add("get", url);
+        request.add("path", "id");
 
         // Sends the request
         bytes32 _requestId = sendChainlinkRequestTo(oracle, request, fee);
+        requestByAddress[_requestId] = _owner;
     }
 
-    function checkUserBadge(address _owner, uint256 _id) public view returns(bool) {
-        return badgesByUser[_owner][_id];
-    }
-
-    function getUserBadges(address _owner) public view returns(bool[] memory) {
-        return badgesByUser[_owner];
-    }
 
     /**
      * Receive the response in the form of uint256
      */
-    function fulfill(bytes32 _requestId, uint256 _badgeId) from_oracle public {
+    function fulfill(bytes32 _requestId, uint256 _badgeId) public {
+
+        validateChainlinkCallback(_requestId);
         emit ApiResponse(_requestId, _badgeId);
-        address badgeUser = requestByAddress[_requestId];
-        bool badgeFound = false;
-        for(uint256 i=0; i<totalUserBadges[badgeUser]; i++) {
-            if(badgesByUser[badgeUser][i] == _badgeId) {
-                badgeFound = true;
+        if(_badgeId > 0) {
+            address badgeUser = requestByAddress[_requestId];
+            require(badgeUser != address(0), "Badge user must exist.");
+            if(!checkUserBadge(badgeUser, _badgeId)) {
+                string memory badgeUrl = getBadgeUrl(_badgeId);
+                mintNFT(badgeUser, badgeUrl);
+                badgesByUser[badgeUser].push(_badgeId);
+                totalUserBadges[badgeUser]++;
             }
-        }
-        if(!badgeFound) {
-            string memory badgeUrl = BadgeLookup(badgeLookup).getBadgeById(_badgeId);
-            mintNFT(badgeUser, badgeUrl);
-            badgesByUser[badgeUser].push(_badgeId);
-            totalUserBadges[badgeUser]++;
         }
     }
 
@@ -178,6 +170,25 @@ contract SynthBadge is ERC721URIStorage, ChainlinkClient {
             }
             return result;
         }
+    }
+
+    function checkUserBadge(address _owner, uint256 _id) public view returns(bool badgeFound) {
+        badgeFound = false;
+        for(uint256 i=0; i<totalUserBadges[_owner]; i++) {
+            if(badgesByUser[_owner][i] == _id) {
+                badgeFound = true;
+            }
+        }
+        return badgeFound;
+    }
+
+    function getUserBadges(address _owner) public view returns(uint256[] memory) {
+        return badgesByUser[_owner];
+    }
+
+    function getBadgeUrl(uint256 _id) public view returns(string memory badgeUrl) {
+        badgeUrl = BadgeLookup(badgeLookup).getBadgeById(_id);
+        return badgeUrl;
     }
 
     /**

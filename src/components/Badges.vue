@@ -22,7 +22,7 @@
                         </button>
                     </h3>
                     <div class="columns is-multiline">
-                        <div class="column is-6" v-for="badge in badges" :key="badge">
+                        <div class="column is-4" v-for="badge in badges" :key="badge">
                             <Badge
                                 :badgeUrl="badge"
                             />
@@ -31,8 +31,15 @@
                 </div>
                 <div class="column">
                     <h3 class="title is-3">Claimed Badges</h3>
-                    {{claimed}}
-                    [{{checkUserBadge}}]
+                    <div class="columns is-multiline">
+                        <div class="column is-4" v-for="badge in claimedBadges" :key="badge.id">
+                            <Badge
+                                :id="badge.id"
+                                :badgeUrl="badge.url"
+                            />
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -56,8 +63,6 @@
                 claimedBadges: [],
                 claimInProgress: false,
                 checkUserBadge: ''
-
-
             }
         },
         props: {
@@ -79,11 +84,26 @@
         methods: {
             loadData: async function() {
                 if(this.queryAddress) {
-                    let badgeResponse = await fetch('http://localhost:3000/' + this.queryAddress);
+                    let badgeResponse = await fetch('http://localhost:3000/badges/' + this.queryAddress);
                     let badgeJson = await badgeResponse.json();
                     this.badges = badgeJson;
                     this.claimed = await this.contract.balanceOf.call(this.queryAddress, {from: this.account});
-                    this.checkUserBadge = await this.contract.getUserBadges.call(this.queryAddress, {from: this.account});
+                    let response = await this.contract.getUserBadges.call(this.queryAddress, {from: this.account});
+                    this.claimedBadges = [];
+                    let id;
+                    for(let i=0; i<response.length; i++) {
+                        id = parseInt(response[i]);
+                        if(id > 0) {
+                            try {
+                                response = await this.contract.tokenURI(id, {from: this.account});
+                                console.log('token uri response', response);
+                                this.claimedBadges.push({id:id, url:response});
+                            }
+                            catch {
+                                console.log('wtf');
+                            }
+                        }
+                    }
                     this.ready = true;
                 }
             },
