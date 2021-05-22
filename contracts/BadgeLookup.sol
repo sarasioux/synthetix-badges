@@ -19,15 +19,15 @@ contract BadgeLookup {
         // Replace these with IPFS URLs
         uint256 id;
         id++;
-        badgeUrl[id] = "https://synthetixbadges.netlify.com/badges/90_days.json";
+        badgeUrl[id] = "https://synthetixbadges.netlify.app/badges/90_days.json";
         id++;
-        badgeUrl[id] = "https://synthetixbadges.netlify.com/badges/180_days.json";
+        badgeUrl[id] = "https://synthetixbadges.netlify.app/badges/180_days.json";
         id++;
-        badgeUrl[id] = "https://synthetixbadges.netlify.com/badges/365_days.json";
+        badgeUrl[id] = "https://synthetixbadges.netlify.app/badges/365_days.json";
         id++;
-        badgeUrl[id] = "https://synthetixbadges.netlify.com/badges/top_100.json";
+        badgeUrl[id] = "https://synthetixbadges.netlify.app/badges/top_100.json";
         id++;
-        badgeUrl[id] = "https://synthetixbadges.netlify.com/badges/top_1000.json";
+        badgeUrl[id] = "https://synthetixbadges.netlify.app/badges/top_1000.json";
         totalBadges = id;
     }
 

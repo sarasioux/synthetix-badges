@@ -89,9 +89,9 @@
       "constant": true
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.8.4+commit.c7e474f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[],\"name\":\"apiUrl\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"badgeUrl\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"}],\"name\":\"getBadgeById\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"url\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getTotalBadges\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"totalBadges\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"constructor\":{\"notice\":\"Simple lookup contract that can be replaced with new information.\"},\"getBadgeById(uint256)\":{\"notice\":\"Token lookup for myself or someone else.\"},\"getTotalBadges()\":{\"notice\":\"Get total badges.\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/Users/Shared/Code/experimental/synthetix-badges/contracts/BadgeLookup.sol\":\"BadgeLookup\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/Shared/Code/experimental/synthetix-badges/contracts/BadgeLookup.sol\":{\"keccak256\":\"0xe6b289262dd023b6aa794873b0910269ff6d5e3417ca84b4b7fd6a59f6779301\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://1882cef089113e1137ce3cad89f37d5bd466d062aedb53ed50a6fcfec09e8d42\",\"dweb:/ipfs/QmU8MhwDxnKud11D7Bka1rSpXF42GFGXwyoEqGWM7xk6Pw\"]}},\"version\":1}",
-  "bytecode": "0x608060405234801561001057600080fd5b506000808061001e90610285565b91505060405180606001604052806037815260200161086b603791396001600083815260200190815260200160002090805190602001906100609291906101a6565b50808061006c90610285565b9150506040518060600160405280603881526020016108a2603891396001600083815260200190815260200160002090805190602001906100ae9291906101a6565b5080806100ba90610285565b915050604051806060016040528060388152602001610833603891396001600083815260200190815260200160002090805190602001906100fc9291906101a6565b50808061010890610285565b9150506040518060600160405280603781526020016107fc6037913960016000838152602001908152602001600020908051906020019061014a9291906101a6565b50808061015690610285565b9150506040518060600160405280603881526020016107c4603891396001600083815260200190815260200160002090805190602001906101989291906101a6565b50806000819055505061032c565b8280546101b290610253565b90600052602060002090601f0160209004810192826101d4576000855561021b565b82601f106101ed57805160ff191683800117855561021b565b8280016001018555821561021b579182015b8281111561021a5782518255916020019190600101906101ff565b5b509050610228919061022c565b5090565b5b8082111561024557600081600090555060010161022d565b5090565b6000819050919050565b6000600282049050600182168061026b57607f821691505b6020821081141561027f5761027e6102fd565b5b50919050565b600061029082610249565b91507fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff8214156102c3576102c26102ce565b5b600182019050919050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052601160045260246000fd5b7f4e487b7100000000000000000000000000000000000000000000000000000000600052602260045260246000fd5b6104898061033b6000396000f3fe608060405234801561001057600080fd5b50600436106100575760003560e01c806347ea81841461005c5780638367e1201461007a5780639dac0d4f14610098578063a490a697146100c8578063b4857ad4146100e6575b600080fd5b610064610116565b604051610071919061032e565b60405180910390f35b61008261011f565b60405161008f919061030c565b60405180910390f35b6100b260048036038101906100ad919061029b565b61013b565b6040516100bf919061030c565b60405180910390f35b6100d06101db565b6040516100dd919061032e565b60405180910390f35b61010060048036038101906100fb919061029b565b6101e1565b60405161010d919061030c565b60405180910390f35b60008054905090565b60405180606001604052806028815260200161042c6028913981565b6001602052806000526040600020600091509050805461015a906103a2565b80601f0160208091040260200160405190810160405280929190818152602001828054610186906103a2565b80156101d35780601f106101a8576101008083540402835291602001916101d3565b820191906000526020600020905b8154815290600101906020018083116101b657829003601f168201915b505050505081565b60005481565b6060600160008381526020019081526020016000208054610201906103a2565b80601f016020809104026020016040519081016040528092919081815260200182805461022d906103a2565b801561027a5780601f1061024f5761010080835404028352916020019161027a565b820191906000526020600020905b81548152906001019060200180831161025d57829003601f168201915b50505050509050919050565b60008135905061029581610414565b92915050565b6000602082840312156102ad57600080fd5b60006102bb84828501610286565b91505092915050565b60006102cf82610349565b6102d98185610354565b93506102e981856020860161036f565b6102f281610403565b840191505092915050565b61030681610365565b82525050565b6000602082019050818103600083015261032681846102c4565b905092915050565b600060208201905061034360008301846102fd565b92915050565b600081519050919050565b600082825260208201905092915050565b6000819050919050565b60005b8381101561038d578082015181840152602081019050610372565b8381111561039c576000848401525b50505050565b600060028204905060018216806103ba57607f821691505b602082108114156103ce576103cd6103d4565b5b50919050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052602260045260246000fd5b6000601f19601f8301169050919050565b61041d81610365565b811461042857600080fd5b5056fe68747470733a2f2f73796e7468657469786261646765732e676c697463682e6d652f62616467652fa264697066735822122038cf4afa1e0093ee33030ec4d3cf2f4f41b661018cd9b9e38bcb807dbb829c5b64736f6c6343000804003368747470733a2f2f73796e7468657469786261646765732e6e65746c6966792e636f6d2f6261646765732f746f705f313030302e6a736f6e68747470733a2f2f73796e7468657469786261646765732e6e65746c6966792e636f6d2f6261646765732f746f705f3130302e6a736f6e68747470733a2f2f73796e7468657469786261646765732e6e65746c6966792e636f6d2f6261646765732f3336355f646179732e6a736f6e68747470733a2f2f73796e7468657469786261646765732e6e65746c6966792e636f6d2f6261646765732f39305f646179732e6a736f6e68747470733a2f2f73796e7468657469786261646765732e6e65746c6966792e636f6d2f6261646765732f3138305f646179732e6a736f6e",
-  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100575760003560e01c806347ea81841461005c5780638367e1201461007a5780639dac0d4f14610098578063a490a697146100c8578063b4857ad4146100e6575b600080fd5b610064610116565b604051610071919061032e565b60405180910390f35b61008261011f565b60405161008f919061030c565b60405180910390f35b6100b260048036038101906100ad919061029b565b61013b565b6040516100bf919061030c565b60405180910390f35b6100d06101db565b6040516100dd919061032e565b60405180910390f35b61010060048036038101906100fb919061029b565b6101e1565b60405161010d919061030c565b60405180910390f35b60008054905090565b60405180606001604052806028815260200161042c6028913981565b6001602052806000526040600020600091509050805461015a906103a2565b80601f0160208091040260200160405190810160405280929190818152602001828054610186906103a2565b80156101d35780601f106101a8576101008083540402835291602001916101d3565b820191906000526020600020905b8154815290600101906020018083116101b657829003601f168201915b505050505081565b60005481565b6060600160008381526020019081526020016000208054610201906103a2565b80601f016020809104026020016040519081016040528092919081815260200182805461022d906103a2565b801561027a5780601f1061024f5761010080835404028352916020019161027a565b820191906000526020600020905b81548152906001019060200180831161025d57829003601f168201915b50505050509050919050565b60008135905061029581610414565b92915050565b6000602082840312156102ad57600080fd5b60006102bb84828501610286565b91505092915050565b60006102cf82610349565b6102d98185610354565b93506102e981856020860161036f565b6102f281610403565b840191505092915050565b61030681610365565b82525050565b6000602082019050818103600083015261032681846102c4565b905092915050565b600060208201905061034360008301846102fd565b92915050565b600081519050919050565b600082825260208201905092915050565b6000819050919050565b60005b8381101561038d578082015181840152602081019050610372565b8381111561039c576000848401525b50505050565b600060028204905060018216806103ba57607f821691505b602082108114156103ce576103cd6103d4565b5b50919050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052602260045260246000fd5b6000601f19601f8301169050919050565b61041d81610365565b811461042857600080fd5b5056fe68747470733a2f2f73796e7468657469786261646765732e676c697463682e6d652f62616467652fa264697066735822122038cf4afa1e0093ee33030ec4d3cf2f4f41b661018cd9b9e38bcb807dbb829c5b64736f6c63430008040033",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.4+commit.c7e474f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[],\"name\":\"apiUrl\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"badgeUrl\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"}],\"name\":\"getBadgeById\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"url\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getTotalBadges\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"totalBadges\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"constructor\":{\"notice\":\"Simple lookup contract that can be replaced with new information.\"},\"getBadgeById(uint256)\":{\"notice\":\"Token lookup for myself or someone else.\"},\"getTotalBadges()\":{\"notice\":\"Get total badges.\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/Users/Shared/Code/experimental/synthetix-badges/contracts/BadgeLookup.sol\":\"BadgeLookup\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/Shared/Code/experimental/synthetix-badges/contracts/BadgeLookup.sol\":{\"keccak256\":\"0xb75242d740178423f545da6f6b2ced394229ad2c2c8dc7df9834d2fdd2181df7\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://ab301cfb50668886fbcf197376747fa13620583e58163e63e1b21ab8d95369c4\",\"dweb:/ipfs/QmQPzqbzxdzzAVyNsE4dMpixcrvMWUS6PTEet28iLPkhzt\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506000808061001e90610285565b9150506040518060600160405280603781526020016107fc603791396001600083815260200190815260200160002090805190602001906100609291906101a6565b50808061006c90610285565b91505060405180606001604052806038815260200161086b603891396001600083815260200190815260200160002090805190602001906100ae9291906101a6565b5080806100ba90610285565b915050604051806060016040528060388152602001610833603891396001600083815260200190815260200160002090805190602001906100fc9291906101a6565b50808061010890610285565b9150506040518060600160405280603781526020016108a36037913960016000838152602001908152602001600020908051906020019061014a9291906101a6565b50808061015690610285565b9150506040518060600160405280603881526020016107c4603891396001600083815260200190815260200160002090805190602001906101989291906101a6565b50806000819055505061032c565b8280546101b290610253565b90600052602060002090601f0160209004810192826101d4576000855561021b565b82601f106101ed57805160ff191683800117855561021b565b8280016001018555821561021b579182015b8281111561021a5782518255916020019190600101906101ff565b5b509050610228919061022c565b5090565b5b8082111561024557600081600090555060010161022d565b5090565b6000819050919050565b6000600282049050600182168061026b57607f821691505b6020821081141561027f5761027e6102fd565b5b50919050565b600061029082610249565b91507fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff8214156102c3576102c26102ce565b5b600182019050919050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052601160045260246000fd5b7f4e487b7100000000000000000000000000000000000000000000000000000000600052602260045260246000fd5b6104898061033b6000396000f3fe608060405234801561001057600080fd5b50600436106100575760003560e01c806347ea81841461005c5780638367e1201461007a5780639dac0d4f14610098578063a490a697146100c8578063b4857ad4146100e6575b600080fd5b610064610116565b604051610071919061032e565b60405180910390f35b61008261011f565b60405161008f919061030c565b60405180910390f35b6100b260048036038101906100ad919061029b565b61013b565b6040516100bf919061030c565b60405180910390f35b6100d06101db565b6040516100dd919061032e565b60405180910390f35b61010060048036038101906100fb919061029b565b6101e1565b60405161010d919061030c565b60405180910390f35b60008054905090565b60405180606001604052806028815260200161042c6028913981565b6001602052806000526040600020600091509050805461015a906103a2565b80601f0160208091040260200160405190810160405280929190818152602001828054610186906103a2565b80156101d35780601f106101a8576101008083540402835291602001916101d3565b820191906000526020600020905b8154815290600101906020018083116101b657829003601f168201915b505050505081565b60005481565b6060600160008381526020019081526020016000208054610201906103a2565b80601f016020809104026020016040519081016040528092919081815260200182805461022d906103a2565b801561027a5780601f1061024f5761010080835404028352916020019161027a565b820191906000526020600020905b81548152906001019060200180831161025d57829003601f168201915b50505050509050919050565b60008135905061029581610414565b92915050565b6000602082840312156102ad57600080fd5b60006102bb84828501610286565b91505092915050565b60006102cf82610349565b6102d98185610354565b93506102e981856020860161036f565b6102f281610403565b840191505092915050565b61030681610365565b82525050565b6000602082019050818103600083015261032681846102c4565b905092915050565b600060208201905061034360008301846102fd565b92915050565b600081519050919050565b600082825260208201905092915050565b6000819050919050565b60005b8381101561038d578082015181840152602081019050610372565b8381111561039c576000848401525b50505050565b600060028204905060018216806103ba57607f821691505b602082108114156103ce576103cd6103d4565b5b50919050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052602260045260246000fd5b6000601f19601f8301169050919050565b61041d81610365565b811461042857600080fd5b5056fe68747470733a2f2f73796e7468657469786261646765732e676c697463682e6d652f62616467652fa26469706673582212204b89cfc6338dec8b9bac57d04048575c5d62f71e2ecda9b4926a25f080eb543c64736f6c6343000804003368747470733a2f2f73796e7468657469786261646765732e6e65746c6966792e6170702f6261646765732f746f705f313030302e6a736f6e68747470733a2f2f73796e7468657469786261646765732e6e65746c6966792e6170702f6261646765732f39305f646179732e6a736f6e68747470733a2f2f73796e7468657469786261646765732e6e65746c6966792e6170702f6261646765732f3336355f646179732e6a736f6e68747470733a2f2f73796e7468657469786261646765732e6e65746c6966792e6170702f6261646765732f3138305f646179732e6a736f6e68747470733a2f2f73796e7468657469786261646765732e6e65746c6966792e6170702f6261646765732f746f705f3130302e6a736f6e",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100575760003560e01c806347ea81841461005c5780638367e1201461007a5780639dac0d4f14610098578063a490a697146100c8578063b4857ad4146100e6575b600080fd5b610064610116565b604051610071919061032e565b60405180910390f35b61008261011f565b60405161008f919061030c565b60405180910390f35b6100b260048036038101906100ad919061029b565b61013b565b6040516100bf919061030c565b60405180910390f35b6100d06101db565b6040516100dd919061032e565b60405180910390f35b61010060048036038101906100fb919061029b565b6101e1565b60405161010d919061030c565b60405180910390f35b60008054905090565b60405180606001604052806028815260200161042c6028913981565b6001602052806000526040600020600091509050805461015a906103a2565b80601f0160208091040260200160405190810160405280929190818152602001828054610186906103a2565b80156101d35780601f106101a8576101008083540402835291602001916101d3565b820191906000526020600020905b8154815290600101906020018083116101b657829003601f168201915b505050505081565b60005481565b6060600160008381526020019081526020016000208054610201906103a2565b80601f016020809104026020016040519081016040528092919081815260200182805461022d906103a2565b801561027a5780601f1061024f5761010080835404028352916020019161027a565b820191906000526020600020905b81548152906001019060200180831161025d57829003601f168201915b50505050509050919050565b60008135905061029581610414565b92915050565b6000602082840312156102ad57600080fd5b60006102bb84828501610286565b91505092915050565b60006102cf82610349565b6102d98185610354565b93506102e981856020860161036f565b6102f281610403565b840191505092915050565b61030681610365565b82525050565b6000602082019050818103600083015261032681846102c4565b905092915050565b600060208201905061034360008301846102fd565b92915050565b600081519050919050565b600082825260208201905092915050565b6000819050919050565b60005b8381101561038d578082015181840152602081019050610372565b8381111561039c576000848401525b50505050565b600060028204905060018216806103ba57607f821691505b602082108114156103ce576103cd6103d4565b5b50919050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052602260045260246000fd5b6000601f19601f8301169050919050565b61041d81610365565b811461042857600080fd5b5056fe68747470733a2f2f73796e7468657469786261646765732e676c697463682e6d652f62616467652fa26469706673582212204b89cfc6338dec8b9bac57d04048575c5d62f71e2ecda9b4926a25f080eb543c64736f6c63430008040033",
   "immutableReferences": {},
   "generatedSources": [
     {
@@ -2458,7 +2458,7 @@
   ],
   "sourceMap": "65:1283:0:-:0;;;419:591;;;;;;;;;;484:10;504:4;;;;;:::i;:::-;;;;518:72;;;;;;;;;;;;;;;;;:8;:12;527:2;518:12;;;;;;;;;;;:72;;;;;;;;;;;;:::i;:::-;;600:4;;;;;:::i;:::-;;;;614:73;;;;;;;;;;;;;;;;;:8;:12;623:2;614:12;;;;;;;;;;;:73;;;;;;;;;;;;:::i;:::-;;697:4;;;;;:::i;:::-;;;;711:73;;;;;;;;;;;;;;;;;:8;:12;720:2;711:12;;;;;;;;;;;:73;;;;;;;;;;;;:::i;:::-;;794:4;;;;;:::i;:::-;;;;808:72;;;;;;;;;;;;;;;;;:8;:12;817:2;808:12;;;;;;;;;;;:72;;;;;;;;;;;;:::i;:::-;;890:4;;;;;:::i;:::-;;;;904:73;;;;;;;;;;;;;;;;;:8;:12;913:2;904:12;;;;;;;;;;;:73;;;;;;;;;;;;:::i;:::-;;1001:2;987:11;:16;;;;419:591;65:1283;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;:::o;7:77:22:-;44:7;73:5;62:16;;52:32;;;:::o;90:320::-;134:6;171:1;165:4;161:12;151:22;;218:1;212:4;208:12;239:18;229:2;;295:4;287:6;283:17;273:27;;229:2;357;349:6;346:14;326:18;323:38;320:2;;;376:18;;:::i;:::-;320:2;141:269;;;;:::o;416:233::-;455:3;478:24;496:5;478:24;:::i;:::-;469:33;;524:66;517:5;514:77;511:2;;;594:18;;:::i;:::-;511:2;641:1;634:5;630:13;623:20;;459:190;;;:::o;655:180::-;703:77;700:1;693:88;800:4;797:1;790:15;824:4;821:1;814:15;841:180;889:77;886:1;879:88;986:4;983:1;976:15;1010:4;1007:1;1000:15;65:1283:0;;;;;;;",
   "deployedSourceMap": "65:1283:0:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1255:90;;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;93:74;;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;279:43;;;;;;;;;;;;;:::i;:::-;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;229:26;;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;1080:128;;;;;;;;;;;;;:::i;:::-;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;1255:90;1301:7;1327:11;;1320:18;;1255:90;:::o;93:74::-;;;;;;;;;;;;;;;;;;;:::o;279:43::-;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;229:26::-;;;;:::o;1080:128::-;1134:17;1169:8;:12;1178:2;1169:12;;;;;;;;;;;1163:18;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1080:128;;;:::o;7:139:22:-;53:5;91:6;78:20;69:29;;107:33;134:5;107:33;:::i;:::-;59:87;;;;:::o;152:262::-;211:6;260:2;248:9;239:7;235:23;231:32;228:2;;;276:1;273;266:12;228:2;319:1;344:53;389:7;380:6;369:9;365:22;344:53;:::i;:::-;334:63;;290:117;218:196;;;;:::o;420:364::-;508:3;536:39;569:5;536:39;:::i;:::-;591:71;655:6;650:3;591:71;:::i;:::-;584:78;;671:52;716:6;711:3;704:4;697:5;693:16;671:52;:::i;:::-;748:29;770:6;748:29;:::i;:::-;743:3;739:39;732:46;;512:272;;;;;:::o;790:118::-;877:24;895:5;877:24;:::i;:::-;872:3;865:37;855:53;;:::o;914:313::-;1027:4;1065:2;1054:9;1050:18;1042:26;;1114:9;1108:4;1104:20;1100:1;1089:9;1085:17;1078:47;1142:78;1215:4;1206:6;1142:78;:::i;:::-;1134:86;;1032:195;;;;:::o;1233:222::-;1326:4;1364:2;1353:9;1349:18;1341:26;;1377:71;1445:1;1434:9;1430:17;1421:6;1377:71;:::i;:::-;1331:124;;;;:::o;1461:99::-;1513:6;1547:5;1541:12;1531:22;;1520:40;;;:::o;1566:169::-;1650:11;1684:6;1679:3;1672:19;1724:4;1719:3;1715:14;1700:29;;1662:73;;;;:::o;1741:77::-;1778:7;1807:5;1796:16;;1786:32;;;:::o;1824:307::-;1892:1;1902:113;1916:6;1913:1;1910:13;1902:113;;;2001:1;1996:3;1992:11;1986:18;1982:1;1977:3;1973:11;1966:39;1938:2;1935:1;1931:10;1926:15;;1902:113;;;2033:6;2030:1;2027:13;2024:2;;;2113:1;2104:6;2099:3;2095:16;2088:27;2024:2;1873:258;;;;:::o;2137:320::-;2181:6;2218:1;2212:4;2208:12;2198:22;;2265:1;2259:4;2255:12;2286:18;2276:2;;2342:4;2334:6;2330:17;2320:27;;2276:2;2404;2396:6;2393:14;2373:18;2370:38;2367:2;;;2423:18;;:::i;:::-;2367:2;2188:269;;;;:::o;2463:180::-;2511:77;2508:1;2501:88;2608:4;2605:1;2598:15;2632:4;2629:1;2622:15;2649:102;2690:6;2741:2;2737:7;2732:2;2725:5;2721:14;2717:28;2707:38;;2697:54;;;:::o;2757:122::-;2830:24;2848:5;2830:24;:::i;:::-;2823:5;2820:35;2810:2;;2869:1;2866;2859:12;2810:2;2800:79;:::o",
-  "source": "// SPDX-License-Identifier: MIT\npragma solidity >=0.8.0 <0.9.0;\n\ncontract BadgeLookup {\n\n    string constant public apiUrl = \"https://synthetixbadges.glitch.me/badge/\";               // api.synthetix.io\n\n    // Badge Lookups\n    uint256 public totalBadges;\n\n    // Internals\n    mapping (uint256 => string) public badgeUrl;\n\n     /**\n     * Simple lookup contract that can be replaced with new information.\n     */\n    constructor() {\n\n        // Replace these with IPFS URLs\n        uint256 id;\n        id++;\n        badgeUrl[id] = \"https://synthetixbadges.netlify.com/badges/90_days.json\";\n        id++;\n        badgeUrl[id] = \"https://synthetixbadges.netlify.com/badges/180_days.json\";\n        id++;\n        badgeUrl[id] = \"https://synthetixbadges.netlify.com/badges/365_days.json\";\n        id++;\n        badgeUrl[id] = \"https://synthetixbadges.netlify.com/badges/top_100.json\";\n        id++;\n        badgeUrl[id] = \"https://synthetixbadges.netlify.com/badges/top_1000.json\";\n        totalBadges = id;\n    }\n\n    /**\n     * Token lookup for myself or someone else.\n     */\n    function getBadgeById(uint256 id) view public returns(string memory url) {\n        url = badgeUrl[id];\n        return url;\n    }\n\n    /**\n     * Get total badges.\n     */\n    function getTotalBadges() view public returns(uint256) {\n        return totalBadges;\n    }\n\n}\n\n\n\n",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity >=0.8.0 <0.9.0;\n\ncontract BadgeLookup {\n\n    string constant public apiUrl = \"https://synthetixbadges.glitch.me/badge/\";               // api.synthetix.io\n\n    // Badge Lookups\n    uint256 public totalBadges;\n\n    // Internals\n    mapping (uint256 => string) public badgeUrl;\n\n     /**\n     * Simple lookup contract that can be replaced with new information.\n     */\n    constructor() {\n\n        // Replace these with IPFS URLs\n        uint256 id;\n        id++;\n        badgeUrl[id] = \"https://synthetixbadges.netlify.app/badges/90_days.json\";\n        id++;\n        badgeUrl[id] = \"https://synthetixbadges.netlify.app/badges/180_days.json\";\n        id++;\n        badgeUrl[id] = \"https://synthetixbadges.netlify.app/badges/365_days.json\";\n        id++;\n        badgeUrl[id] = \"https://synthetixbadges.netlify.app/badges/top_100.json\";\n        id++;\n        badgeUrl[id] = \"https://synthetixbadges.netlify.app/badges/top_1000.json\";\n        totalBadges = id;\n    }\n\n    /**\n     * Token lookup for myself or someone else.\n     */\n    function getBadgeById(uint256 id) view public returns(string memory url) {\n        url = badgeUrl[id];\n        return url;\n    }\n\n    /**\n     * Get total badges.\n     */\n    function getTotalBadges() view public returns(uint256) {\n        return totalBadges;\n    }\n\n}\n\n\n\n",
   "sourcePath": "/Users/Shared/Code/experimental/synthetix-badges/contracts/BadgeLookup.sol",
   "ast": {
     "absolutePath": "/Users/Shared/Code/experimental/synthetix-badges/contracts/BadgeLookup.sol",
@@ -2740,7 +2740,7 @@
                     "nodeType": "Assignment",
                     "operator": "=",
                     "rightHandSide": {
-                      "hexValue": "68747470733a2f2f73796e7468657469786261646765732e6e65746c6966792e636f6d2f6261646765732f39305f646179732e6a736f6e",
+                      "hexValue": "68747470733a2f2f73796e7468657469786261646765732e6e65746c6966792e6170702f6261646765732f39305f646179732e6a736f6e",
                       "id": 23,
                       "isConstant": false,
                       "isLValue": false,
@@ -2750,10 +2750,10 @@
                       "nodeType": "Literal",
                       "src": "533:57:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_stringliteral_8af3abb31e66e11f8ccd287bc4546d11bfae28962216c35c059d068f5fe0be0c",
-                        "typeString": "literal_string \"https://synthetixbadges.netlify.com/badges/90_days.json\""
+                        "typeIdentifier": "t_stringliteral_30fea164dbc5de87a9459018f0d2c8028b70866e1ec5da1cdecc42b11c5a66a1",
+                        "typeString": "literal_string \"https://synthetixbadges.netlify.app/badges/90_days.json\""
                       },
-                      "value": "https://synthetixbadges.netlify.com/badges/90_days.json"
+                      "value": "https://synthetixbadges.netlify.app/badges/90_days.json"
                     },
                     "src": "518:72:0",
                     "typeDescriptions": {
@@ -2844,7 +2844,7 @@
                     "nodeType": "Assignment",
                     "operator": "=",
                     "rightHandSide": {
-                      "hexValue": "68747470733a2f2f73796e7468657469786261646765732e6e65746c6966792e636f6d2f6261646765732f3138305f646179732e6a736f6e",
+                      "hexValue": "68747470733a2f2f73796e7468657469786261646765732e6e65746c6966792e6170702f6261646765732f3138305f646179732e6a736f6e",
                       "id": 32,
                       "isConstant": false,
                       "isLValue": false,
@@ -2854,10 +2854,10 @@
                       "nodeType": "Literal",
                       "src": "629:58:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_stringliteral_a895a0d247306db5f68c5bd2cc12f5e6cbe5cbdce6c0b759c1a89805376466c2",
-                        "typeString": "literal_string \"https://synthetixbadges.netlify.com/badges/180_days.json\""
+                        "typeIdentifier": "t_stringliteral_ccc33d9045894e97120ff6b1a2a8c822678c2113c528e01bf280141736603a98",
+                        "typeString": "literal_string \"https://synthetixbadges.netlify.app/badges/180_days.json\""
                       },
-                      "value": "https://synthetixbadges.netlify.com/badges/180_days.json"
+                      "value": "https://synthetixbadges.netlify.app/badges/180_days.json"
                     },
                     "src": "614:73:0",
                     "typeDescriptions": {
@@ -2948,7 +2948,7 @@
                     "nodeType": "Assignment",
                     "operator": "=",
                     "rightHandSide": {
-                      "hexValue": "68747470733a2f2f73796e7468657469786261646765732e6e65746c6966792e636f6d2f6261646765732f3336355f646179732e6a736f6e",
+                      "hexValue": "68747470733a2f2f73796e7468657469786261646765732e6e65746c6966792e6170702f6261646765732f3336355f646179732e6a736f6e",
                       "id": 41,
                       "isConstant": false,
                       "isLValue": false,
@@ -2958,10 +2958,10 @@
                       "nodeType": "Literal",
                       "src": "726:58:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_stringliteral_65d8bbaf29e77ead4204d31cdef0d18f83013bfacc5c96c30ef7db0e2ec540d9",
-                        "typeString": "literal_string \"https://synthetixbadges.netlify.com/badges/365_days.json\""
+                        "typeIdentifier": "t_stringliteral_4a11f799608d309ffe38989bb75544189893862cd452a07f32d80c66160d2269",
+                        "typeString": "literal_string \"https://synthetixbadges.netlify.app/badges/365_days.json\""
                       },
-                      "value": "https://synthetixbadges.netlify.com/badges/365_days.json"
+                      "value": "https://synthetixbadges.netlify.app/badges/365_days.json"
                     },
                     "src": "711:73:0",
                     "typeDescriptions": {
@@ -3052,7 +3052,7 @@
                     "nodeType": "Assignment",
                     "operator": "=",
                     "rightHandSide": {
-                      "hexValue": "68747470733a2f2f73796e7468657469786261646765732e6e65746c6966792e636f6d2f6261646765732f746f705f3130302e6a736f6e",
+                      "hexValue": "68747470733a2f2f73796e7468657469786261646765732e6e65746c6966792e6170702f6261646765732f746f705f3130302e6a736f6e",
                       "id": 50,
                       "isConstant": false,
                       "isLValue": false,
@@ -3062,10 +3062,10 @@
                       "nodeType": "Literal",
                       "src": "823:57:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_stringliteral_5efc8b304817f5c82aa2593ca57c7dedb58a15fbba0c50d52d445dad1845ee8a",
-                        "typeString": "literal_string \"https://synthetixbadges.netlify.com/badges/top_100.json\""
+                        "typeIdentifier": "t_stringliteral_f9654104cae07b316675098b9c559d7bc078fe86a06a8f2fe4c08c23e4c61b68",
+                        "typeString": "literal_string \"https://synthetixbadges.netlify.app/badges/top_100.json\""
                       },
-                      "value": "https://synthetixbadges.netlify.com/badges/top_100.json"
+                      "value": "https://synthetixbadges.netlify.app/badges/top_100.json"
                     },
                     "src": "808:72:0",
                     "typeDescriptions": {
@@ -3156,7 +3156,7 @@
                     "nodeType": "Assignment",
                     "operator": "=",
                     "rightHandSide": {
-                      "hexValue": "68747470733a2f2f73796e7468657469786261646765732e6e65746c6966792e636f6d2f6261646765732f746f705f313030302e6a736f6e",
+                      "hexValue": "68747470733a2f2f73796e7468657469786261646765732e6e65746c6966792e6170702f6261646765732f746f705f313030302e6a736f6e",
                       "id": 59,
                       "isConstant": false,
                       "isLValue": false,
@@ -3166,10 +3166,10 @@
                       "nodeType": "Literal",
                       "src": "919:58:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_stringliteral_154d8ce8d4220ae8c7d09021d3e25f36fe3c64313845ab2d316939f6221ade68",
-                        "typeString": "literal_string \"https://synthetixbadges.netlify.com/badges/top_1000.json\""
+                        "typeIdentifier": "t_stringliteral_026a0949379eaf30e8be80ce810558d0fc1ad880bfea87f33ca8a53a8c6459e9",
+                        "typeString": "literal_string \"https://synthetixbadges.netlify.app/badges/top_1000.json\""
                       },
-                      "value": "https://synthetixbadges.netlify.com/badges/top_1000.json"
+                      "value": "https://synthetixbadges.netlify.app/badges/top_1000.json"
                     },
                     "src": "904:73:0",
                     "typeDescriptions": {
@@ -3813,7 +3813,7 @@
                     "nodeType": "Assignment",
                     "operator": "=",
                     "rightHandSide": {
-                      "hexValue": "68747470733a2f2f73796e7468657469786261646765732e6e65746c6966792e636f6d2f6261646765732f39305f646179732e6a736f6e",
+                      "hexValue": "68747470733a2f2f73796e7468657469786261646765732e6e65746c6966792e6170702f6261646765732f39305f646179732e6a736f6e",
                       "id": 23,
                       "isConstant": false,
                       "isLValue": false,
@@ -3823,10 +3823,10 @@
                       "nodeType": "Literal",
                       "src": "533:57:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_stringliteral_8af3abb31e66e11f8ccd287bc4546d11bfae28962216c35c059d068f5fe0be0c",
-                        "typeString": "literal_string \"https://synthetixbadges.netlify.com/badges/90_days.json\""
+                        "typeIdentifier": "t_stringliteral_30fea164dbc5de87a9459018f0d2c8028b70866e1ec5da1cdecc42b11c5a66a1",
+                        "typeString": "literal_string \"https://synthetixbadges.netlify.app/badges/90_days.json\""
                       },
-                      "value": "https://synthetixbadges.netlify.com/badges/90_days.json"
+                      "value": "https://synthetixbadges.netlify.app/badges/90_days.json"
                     },
                     "src": "518:72:0",
                     "typeDescriptions": {
@@ -3917,7 +3917,7 @@
                     "nodeType": "Assignment",
                     "operator": "=",
                     "rightHandSide": {
-                      "hexValue": "68747470733a2f2f73796e7468657469786261646765732e6e65746c6966792e636f6d2f6261646765732f3138305f646179732e6a736f6e",
+                      "hexValue": "68747470733a2f2f73796e7468657469786261646765732e6e65746c6966792e6170702f6261646765732f3138305f646179732e6a736f6e",
                       "id": 32,
                       "isConstant": false,
                       "isLValue": false,
@@ -3927,10 +3927,10 @@
                       "nodeType": "Literal",
                       "src": "629:58:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_stringliteral_a895a0d247306db5f68c5bd2cc12f5e6cbe5cbdce6c0b759c1a89805376466c2",
-                        "typeString": "literal_string \"https://synthetixbadges.netlify.com/badges/180_days.json\""
+                        "typeIdentifier": "t_stringliteral_ccc33d9045894e97120ff6b1a2a8c822678c2113c528e01bf280141736603a98",
+                        "typeString": "literal_string \"https://synthetixbadges.netlify.app/badges/180_days.json\""
                       },
-                      "value": "https://synthetixbadges.netlify.com/badges/180_days.json"
+                      "value": "https://synthetixbadges.netlify.app/badges/180_days.json"
                     },
                     "src": "614:73:0",
                     "typeDescriptions": {
@@ -4021,7 +4021,7 @@
                     "nodeType": "Assignment",
                     "operator": "=",
                     "rightHandSide": {
-                      "hexValue": "68747470733a2f2f73796e7468657469786261646765732e6e65746c6966792e636f6d2f6261646765732f3336355f646179732e6a736f6e",
+                      "hexValue": "68747470733a2f2f73796e7468657469786261646765732e6e65746c6966792e6170702f6261646765732f3336355f646179732e6a736f6e",
                       "id": 41,
                       "isConstant": false,
                       "isLValue": false,
@@ -4031,10 +4031,10 @@
                       "nodeType": "Literal",
                       "src": "726:58:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_stringliteral_65d8bbaf29e77ead4204d31cdef0d18f83013bfacc5c96c30ef7db0e2ec540d9",
-                        "typeString": "literal_string \"https://synthetixbadges.netlify.com/badges/365_days.json\""
+                        "typeIdentifier": "t_stringliteral_4a11f799608d309ffe38989bb75544189893862cd452a07f32d80c66160d2269",
+                        "typeString": "literal_string \"https://synthetixbadges.netlify.app/badges/365_days.json\""
                       },
-                      "value": "https://synthetixbadges.netlify.com/badges/365_days.json"
+                      "value": "https://synthetixbadges.netlify.app/badges/365_days.json"
                     },
                     "src": "711:73:0",
                     "typeDescriptions": {
@@ -4125,7 +4125,7 @@
                     "nodeType": "Assignment",
                     "operator": "=",
                     "rightHandSide": {
-                      "hexValue": "68747470733a2f2f73796e7468657469786261646765732e6e65746c6966792e636f6d2f6261646765732f746f705f3130302e6a736f6e",
+                      "hexValue": "68747470733a2f2f73796e7468657469786261646765732e6e65746c6966792e6170702f6261646765732f746f705f3130302e6a736f6e",
                       "id": 50,
                       "isConstant": false,
                       "isLValue": false,
@@ -4135,10 +4135,10 @@
                       "nodeType": "Literal",
                       "src": "823:57:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_stringliteral_5efc8b304817f5c82aa2593ca57c7dedb58a15fbba0c50d52d445dad1845ee8a",
-                        "typeString": "literal_string \"https://synthetixbadges.netlify.com/badges/top_100.json\""
+                        "typeIdentifier": "t_stringliteral_f9654104cae07b316675098b9c559d7bc078fe86a06a8f2fe4c08c23e4c61b68",
+                        "typeString": "literal_string \"https://synthetixbadges.netlify.app/badges/top_100.json\""
                       },
-                      "value": "https://synthetixbadges.netlify.com/badges/top_100.json"
+                      "value": "https://synthetixbadges.netlify.app/badges/top_100.json"
                     },
                     "src": "808:72:0",
                     "typeDescriptions": {
@@ -4229,7 +4229,7 @@
                     "nodeType": "Assignment",
                     "operator": "=",
                     "rightHandSide": {
-                      "hexValue": "68747470733a2f2f73796e7468657469786261646765732e6e65746c6966792e636f6d2f6261646765732f746f705f313030302e6a736f6e",
+                      "hexValue": "68747470733a2f2f73796e7468657469786261646765732e6e65746c6966792e6170702f6261646765732f746f705f313030302e6a736f6e",
                       "id": 59,
                       "isConstant": false,
                       "isLValue": false,
@@ -4239,10 +4239,10 @@
                       "nodeType": "Literal",
                       "src": "919:58:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_stringliteral_154d8ce8d4220ae8c7d09021d3e25f36fe3c64313845ab2d316939f6221ade68",
-                        "typeString": "literal_string \"https://synthetixbadges.netlify.com/badges/top_1000.json\""
+                        "typeIdentifier": "t_stringliteral_026a0949379eaf30e8be80ce810558d0fc1ad880bfea87f33ca8a53a8c6459e9",
+                        "typeString": "literal_string \"https://synthetixbadges.netlify.app/badges/top_1000.json\""
                       },
-                      "value": "https://synthetixbadges.netlify.com/badges/top_1000.json"
+                      "value": "https://synthetixbadges.netlify.app/badges/top_1000.json"
                     },
                     "src": "904:73:0",
                     "typeDescriptions": {
@@ -4614,12 +4614,12 @@
     "42": {
       "events": {},
       "links": {},
-      "address": "0xD395483E1cA5f9F076165e0044B082E4778ea69A",
-      "transactionHash": "0xb2fb18714bc8f779abf3e8514620551ea2bda879d933df971afac8cf8bb218e7"
+      "address": "0x1A2E4Fd12b500be415C8A1F0e9429301Ac3D41b6",
+      "transactionHash": "0x6ad1e31c8c081f91bd54585fb247506cc517979cdcd6eb27048053066443ccf7"
     }
   },
   "schemaVersion": "3.4.1",
-  "updatedAt": "2021-05-22T01:38:22.048Z",
+  "updatedAt": "2021-05-22T02:55:17.218Z",
   "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",
