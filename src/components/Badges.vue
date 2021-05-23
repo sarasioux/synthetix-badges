@@ -88,7 +88,7 @@
         methods: {
             loadData: async function() {
                 if(this.queryAddress) {
-                    let badgeResponse = await fetch('http://synthetixbadges.glitch.me/badges/' + this.queryAddress);
+                    let badgeResponse = await fetch('https://synthetixbadges.glitch.me/badges/' + this.queryAddress);
                     let badgeJson = await badgeResponse.json();
                     this.badges = badgeJson;
                     this.claimed = await this.contract.balanceOf.call(this.queryAddress, {from: this.account});
