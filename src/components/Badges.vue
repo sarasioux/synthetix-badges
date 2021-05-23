@@ -3,6 +3,10 @@
         <p class="panel-heading">
             Badges for <span class="has-text-info">{{queryAddress}}</span>
         </p>
+        <section v-if="!ready" class="section">
+            <progress class="progress is-large is-info" max="100">60%</progress>
+        </section>
+
         <div class="container" v-if="ready">
             <div class="columns">
                 <div class="column">
@@ -30,7 +34,7 @@
                     </div>
                 </div>
                 <div class="column">
-                    <h3 class="title is-3">Claimed Badges</h3>
+                    <h3 class="title is-3">Claimed Badges [{{claimed}}]</h3>
                     <div class="columns is-multiline">
                         <div class="column is-4" v-for="badge in claimedBadges" :key="badge.id">
                             <Badge
@@ -44,7 +48,7 @@
             </div>
         </div>
         <div class="section has-text-centered">
-            <code>{{contract.address}}</code>
+            <code>This Contract: {{contract.address}}</code>
         </div>
     </nav>
 </template>
@@ -84,20 +88,20 @@
         methods: {
             loadData: async function() {
                 if(this.queryAddress) {
-                    let badgeResponse = await fetch('http://localhost:3000/badges/' + this.queryAddress);
+                    let badgeResponse = await fetch('http://synthetixbadges.glitch.me/badges/' + this.queryAddress);
                     let badgeJson = await badgeResponse.json();
                     this.badges = badgeJson;
                     this.claimed = await this.contract.balanceOf.call(this.queryAddress, {from: this.account});
                     let response = await this.contract.getUserBadges.call(this.queryAddress, {from: this.account});
                     this.claimedBadges = [];
                     let id;
+                    let res;
                     for(let i=0; i<response.length; i++) {
                         id = parseInt(response[i]);
                         if(id > 0) {
                             try {
-                                response = await this.contract.tokenURI(id, {from: this.account});
-                                console.log('token uri response', response);
-                                this.claimedBadges.push({id:id, url:response});
+                                res = await this.contract.getTokenUrl(id, {from: this.account});
+                                this.claimedBadges.push({id:id, url:res});
                             }
                             catch {
                                 console.log('wtf');
@@ -109,10 +113,9 @@
             },
             claimBadges: async function() {
                 this.claimInProgress = true;
-                console.log('requesting badges for, from', this.queryAddress, this.account);
-                let response = await this.contract.requestBadges(this.queryAddress, {from: this.account});
-                console.log('response', response);
+                await this.contract.requestBadges(this.queryAddress, {from: this.account});
                 this.claimInProgress = false;
+                this.loadData();
             }
         }
     }

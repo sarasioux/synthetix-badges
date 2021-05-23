@@ -49,12 +49,9 @@
                     const accounts = await this.$web3.currentProvider.send('eth_requestAccounts');
                     this.isConnected = true;
                     this.account = accounts.result[0];
-                    //this.queryAddress = this.account;
                     this.queryAddress = '0x865973fc3b40aff4b16ff54beb5aaefe33dccf8d';
                     this.connectionInProgress = false;
-
                     this.initContracts();
-
                     //this.getNFTs();
 
                 } catch (error) {
@@ -64,7 +61,6 @@
             },
             initContracts: async function() {
                 let contract = TruffleContract(SynthBadge);
-                console.log('current provider', this.$web3.currentProvider);
                 contract.setProvider(this.$web3.currentProvider);
                 contract.defaults({
                     from: this.account,
@@ -93,5 +89,4 @@
     #app {
         margin-top: 20px;
     }
-
 </style>

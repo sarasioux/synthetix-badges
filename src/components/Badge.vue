@@ -52,4 +52,9 @@
     .card-content {
         padding: 0.8em;
     }
+    .id-tag {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+    }
 </style>

@@ -172,6 +172,11 @@ contract SynthBadge is ERC721URIStorage, ChainlinkClient {
         }
     }
 
+    function getTokenUrl(uint256 _id) view public returns(string memory _url) {
+        _url = tokenURI(_id);
+        return _url;
+    }
+
     function checkUserBadge(address _owner, uint256 _id) public view returns(bool badgeFound) {
         badgeFound = false;
         for(uint256 i=0; i<totalUserBadges[_owner]; i++) {
