@@ -34,7 +34,7 @@
                     </div>
                 </div>
                 <div class="column">
-                    <h3 class="title is-3">Claimed Badges [{{claimed}}]</h3>
+                    <h3 class="title is-3">Claimed Badges</h3>
                     <div class="columns is-multiline">
                         <div class="column is-4" v-for="badge in claimedBadges" :key="badge.id">
                             <Badge
