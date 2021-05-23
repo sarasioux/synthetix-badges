@@ -1,4 +1,19 @@
-# shownft-app
+# Synthetix Badges
+
+This project is a response to:
+https://gitcoin.co/issue/snxgrants/open-defi-hackathon/6/100025687
+
+You can see the live dApp here:
+https://synthetixbadges.netlify.app/
+
+This solution required an API, which is hosted here:
+https://synthetixbadges.glitch.me/
+
+The github for the API is here:
+https://github.com/sarasioux/synthetix-badges-api
+
+## Overview
+
 
 ## Project setup
 ```
