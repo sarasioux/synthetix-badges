@@ -23,7 +23,9 @@ Using this method, new badges can be added to the system at any time, and the to
 * Qualifying Badges is reading historic data from Mainnet
 * Claimed Badges is minting NFTs on Kovan
 * You can lookup and claim for any address (I did that for testing)
-
+* NFTs are minted with OpenSea standards, so their metadata will show up as a collectible in most NFT sites.
+* 5 badges currently exist: 90, 180, and 365 day staker, and top 100 and 1000 holders.
+* The dApp is just for demonstration purposes, I would combine the functionality with the Spartan NFT game.
 
 ## API
 
