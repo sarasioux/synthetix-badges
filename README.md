@@ -23,9 +23,28 @@ Using this method, new badges can be added to the system at any time, and the to
 * Qualifying Badges is reading historic data from Mainnet
 * Claimed Badges is minting NFTs on Kovan
 * You can lookup and claim for any address (I did that for testing)
+* API requests are fulfilled using Chainlink.
 * NFTs are minted with OpenSea standards, so their metadata will show up as a collectible in most NFT sites.
 * 5 badges currently exist: 90, 180, and 365 day staker, and top 100 and 1000 holders.
 * The dApp is just for demonstration purposes, I would combine the functionality with the Spartan NFT game.
+
+## Flowchart
+
+The system can be understood with this very professional flowchart.
+
+![Flowchart](https://github.com/sarasioux/synthetix-badges/blob/master/public/flowchart.png?raw=true)
+
+The API's job is to figure out all potential badges for an address using The Graph's historic data, and compare those to already claimed badges using the contract's query methods.  The result is a set of "qualifying badges" which can be used by the contract or the dApp to provide a user experience.
+
+## dApp
+
+I didn't go too far on building out the dApp for this system as I feel its unnecessary.  The real user interface should live on your main member site, or potentially inside the Spartan NFT game.  This dApp was provided for demonstration purposes to show that the system is working and allow you to lookup potential badges for any address for fun.
+
+## Badges
+
+The badges themselves are minted using the OpenSea NFT metadata definition standard.  I added appropriate attributes to the two classes, so if you list your NFTs in an NFT-viewer like OpenSea it will display the attributes.
+
+The badge imagery is a placeholder, I would recommend contracting out for hand-drawn or designed images.  Currently there are 5 different badges so I used 5 different images of 300 the movie.
 
 ## API
 
@@ -36,6 +55,9 @@ The API has two method URLs:
  * Returns an array of badge URLs of qualifying badges.
 
 ## Project setup
+
+The token contract needs to be funded with LINK in order to work.
+
 ```
 npm install
 ```
