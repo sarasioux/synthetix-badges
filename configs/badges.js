@@ -1,4 +1,4 @@
-const badgeUrl = 'http://localhost:8080/';
+const badgeUrl = 'https://synthetixbadges.netlify.app/';
 
 module.exports = {
     badges: {

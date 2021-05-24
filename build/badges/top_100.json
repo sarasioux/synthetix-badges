@@ -1,1 +1,1 @@
-{"name":"Top 100 Holder","description":"You have one of the top 100 bags in SNX.","external_url":"http://localhost:8080/top_100","image":"http://localhost:8080/fighters/fighter-90-50-0.png","attributes":[{"trait_type":"Days Staked","value":365,"max_value":365}]}
+{"name":"Top 100 Holder","description":"You have one of the top 100 bags in SNX.","external_url":"https://synthetixbadges.netlify.app/top_100","image":"https://synthetixbadges.netlify.app/fighters/fighter-90-50-0.png","attributes":[{"trait_type":"Days Staked","value":365,"max_value":365}]}
